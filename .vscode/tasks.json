@@ -6,8 +6,10 @@
       "type": "shell",
       "command": "${config:abl.configuration.runtimes.0.path}\\bin\\prowin.exe",
       "args": [
-        "-p", "${file}",
-        "-pf", "${workspaceFolder}\\startup.pf"
+        "-p",
+        "${file}",
+        "-pf",
+        "${workspaceFolder}\\startup.pf"
       ],
       "group": "build",
       "presentation": {
@@ -22,12 +24,48 @@
       "command": "${config:abl.configuration.runtimes.0.path}\\bin\\_progres.exe",
       "args": [
         "-b",
-        "-p", "${file}",
-        "-pf", "${workspaceFolder}\\startup.pf"
+        "-p",
+        "${file}",
+        "-pf",
+        "${workspaceFolder}\\startup.pf"
       ],
       "group": "build",
       "presentation": {
         "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Master",
+      "type": "shell",
+      "command": "${config:abl.configuration.runtimes.0.path}\\bin\\prowin.exe",
+      "args": [
+        "-p",
+        "src/main/p/ej3-master.p",
+        "-pf",
+        "${workspaceFolder}\\startup.pf",
+        "-debugReady",
+        "3099"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Kill AVM",
+      "type": "shell",
+      "command": "taskkill",
+      "args": [
+        "/IM",
+        "_progres.exe",
+        "/F"
+      ],
+      "presentation": {
+        "reveal": "silent",
         "panel": "shared"
       },
       "problemMatcher": []
