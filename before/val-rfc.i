@@ -1,0 +1,6 @@
+/* val-rfc.i — Validacion de RFC (version legacy, sin organizar) */
+DEFINE VARIABLE VALID-RFC AS LOGICAL NO-UNDO INITIAL FALSE.
+DEFINE VARIABLE cRFC AS CHARACTER NO-UNDO.
+
+IF LENGTH(cRFC) >= 12 AND LENGTH(cRFC) <= 13 THEN
+    VALID-RFC = TRUE.

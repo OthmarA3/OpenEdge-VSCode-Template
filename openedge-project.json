@@ -14,15 +14,7 @@
       "path": "src"
     },
     {
-      "path": "src/main/i",
-      "type": "propath"
-    },
-    {
-      "path": "src/main/p",
-      "type": "propath"
-    },
-    {
-      "path": "src/main/lib",
+      "path": "src/main/*",
       "type": "propath"
     }
   ],
