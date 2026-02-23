@@ -27,7 +27,16 @@
     }
   ],
   "buildDirectory": "build",
-  "dbConnections": [],
+  "dbConnections": [
+    {
+      "name": "sports2000",
+      "connect": "-db db/data/sports2000 -1",
+      "schemaFile": "db/schema/sports2000.df",
+      "aliases": [
+        "sports2000"
+      ]
+    }
+  ],
   "numThreads": 1,
   "procedures": [],
   "compilationOptions": {
