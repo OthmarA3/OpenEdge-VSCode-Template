@@ -1,0 +1,7 @@
+# startup.pf — Parametros de inicio de Progress
+# Descomenta y ajusta la linea de conexion a tu base de datos:
+#
+# -db db/data/mibd -1
+#
+# Ejemplo con sports2000:
+# -db db/data/sports2000 -1

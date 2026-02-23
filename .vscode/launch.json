@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to AVM",
+      "type": "abl",
+      "request": "attach",
+      "hostname": "127.0.0.1",
+      "mode": "legacy",
+      "port": 3099,
+      "localRoot": "${workspaceFolder}",
+      "pause": true
+    },
+    {
+      "name": "Attach to AVM - No GUI",
+      "type": "abl",
+      "request": "attach",
+      "hostname": "127.0.0.1",
+      "mode": "legacy",
+      "port": 3099,
+      "localRoot": "${workspaceFolder}",
+      "pause": true
+    }
+  ]
+}

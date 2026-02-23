@@ -1,0 +1,12 @@
+# Linguist — Clasificar archivos como OpenEdge ABL
+*.p linguist-language=OpenEdge-ABL
+*.i linguist-language=OpenEdge-ABL
+*.w linguist-language=OpenEdge-ABL
+*.cls linguist-language=OpenEdge-ABL
+
+# Line endings
+* text=auto
+*.p text eol=crlf
+*.i text eol=crlf
+*.w text eol=crlf
+*.cls text eol=crlf

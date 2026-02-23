@@ -1,0 +1,53 @@
+{
+  "name": "MiProyecto",
+  "version": "1.0",
+  "oeversion": "12.8",
+  "graphicalMode": true,
+  "charset": "utf-8",
+  "includeFileExtensions": [
+    ".i",
+    ".f"
+  ],
+  "buildPath": [
+    {
+      "type": "source",
+      "path": "src"
+    },
+    {
+      "path": "src/main/i",
+      "type": "propath"
+    },
+    {
+      "path": "src/main/p",
+      "type": "propath"
+    },
+    {
+      "path": "src/main/lib",
+      "type": "propath"
+    }
+  ],
+  "buildDirectory": "build",
+  "dbConnections": [],
+  "numThreads": 1,
+  "procedures": [],
+  "compilationOptions": {
+    "-cpstream": "utf-8",
+    "-cpinternal": "utf-8",
+    "-cpcase": "utf-8"
+  },
+  "profiles": [
+    {
+      "name": "Debug",
+      "inherits": "default",
+      "value": {
+        "graphicalMode": true
+      }
+    },
+    {
+      "name": "TTY",
+      "value": {
+        "graphicalMode": false
+      }
+    }
+  ]
+}

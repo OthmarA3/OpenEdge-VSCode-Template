@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run ABL GUI",
+      "type": "shell",
+      "command": "${config:abl.configuration.runtimes.0.path}\\bin\\prowin.exe",
+      "args": [
+        "-p", "${file}",
+        "-pf", "${workspaceFolder}\\startup.pf"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run ABL Batch",
+      "type": "shell",
+      "command": "${config:abl.configuration.runtimes.0.path}\\bin\\_progres.exe",
+      "args": [
+        "-b",
+        "-p", "${file}",
+        "-pf", "${workspaceFolder}\\startup.pf"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Compile ABL File",
+      "type": "abl",
+      "command": "compile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$abl"
+    },
+    {
+      "label": "Compile All ABL",
+      "type": "abl",
+      "command": "compile.all",
+      "group": "build",
+      "problemMatcher": "$abl"
+    }
+  ]
+}

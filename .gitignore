@@ -1,0 +1,25 @@
+# Compilados
+*.r
+build/
+
+# Progress internos
+.builder/
+.pct/
+
+# Base de datos (datos locales)
+db/data/*.db
+db/data/*.lg
+db/data/*.lk
+db/data/*.bi
+db/data/*.d
+db/data/*.ai
+
+# IDE
+.vs/
+*.suo
+*.user
+*.sln
+
+# Sistema
+Thumbs.db
+.DS_Store
