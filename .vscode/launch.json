@@ -20,6 +20,17 @@
       "port": 3099,
       "localRoot": "${workspaceFolder}",
       "pause": true
+    },
+    {
+      "name": "Debug Master",
+      "type": "abl",
+      "request": "attach",
+      "hostname": "127.0.0.1",
+      "mode": "legacy",
+      "port": 3099,
+      "localRoot": "${workspaceFolder}",
+      "pause": true,
+      "postDebugTask": "Kill AVM"
     }
   ]
 }
