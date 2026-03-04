@@ -2,17 +2,19 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Attach to AVM",
+      "name": "Debug ABL (Automatic)",
       "type": "abl",
       "request": "attach",
       "hostname": "127.0.0.1",
       "mode": "legacy",
       "port": 3099,
       "localRoot": "${workspaceFolder}",
-      "pause": true
+      "pause": true,
+      "preLaunchTask": "Debug: Start AVM with Debug Ready",
+      "postDebugTask": "Debug: Kill AVM Process"
     },
     {
-      "name": "Attach to AVM - No GUI",
+      "name": "Debug ABL (Manual)",
       "type": "abl",
       "request": "attach",
       "hostname": "127.0.0.1",

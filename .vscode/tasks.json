@@ -3,51 +3,91 @@
   "tasks": [
     {
       "label": "Run ABL GUI",
-      "type": "shell",
-      "command": "${config:abl.configuration.runtimes.0.path}\\bin\\prowin.exe",
+      "type": "process",
+      "command": "C:\\Progress\\OpenEdgev128\\bin\\prowin.exe",
       "args": [
-        "-p", "${file}",
-        "-pf", "${workspaceFolder}\\startup.pf"
+        "-p",
+        "${file}",
+        "-pf",
+        "startup.pf"
       ],
-      "group": "build",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      },
+      "dependsOn": ["Kill AVM"],
       "problemMatcher": []
     },
     {
       "label": "Run ABL Batch",
-      "type": "shell",
-      "command": "${config:abl.configuration.runtimes.0.path}\\bin\\_progres.exe",
+      "type": "process",
+      "command": "C:\\Progress\\OpenEdgev128\\bin\\_progres.exe",
       "args": [
         "-b",
-        "-p", "${file}",
-        "-pf", "${workspaceFolder}\\startup.pf"
+        "-p",
+        "${file}",
+        "-pf",
+        "startup.pf"
       ],
-      "group": "build",
+      "dependsOn": ["Kill AVM"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Kill AVM",
+      "type": "shell",
+      "command": "taskkill",
+      "args": [
+        "/IM",
+        "prowin.exe",
+        "/F"
+      ],
       "presentation": {
-        "reveal": "always",
-        "panel": "shared"
+        "reveal": "silent"
       },
       "problemMatcher": []
     },
     {
-      "label": "Compile ABL File",
-      "type": "abl",
-      "command": "compile",
-      "group": {
-        "kind": "build",
-        "isDefault": true
+      "label": "Debug: Start AVM with Debug Ready",
+      "type": "process",
+      "command": "C:\\Progress\\OpenEdgev128\\bin\\prowin.exe",
+      "args": [
+        "-pf",
+        "startup.pf",
+        "-p",
+        "${file}",
+        "-debugReady",
+        "3099"
+      ],
+      "isBackground": true,
+      "options": {
+        "env": {
+          "DLC": "C:\\Progress\\OpenEdgev128"
+        }
       },
-      "problemMatcher": "$abl"
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".",
+          "endsPattern": "."
+        }
+      }
     },
     {
-      "label": "Compile All ABL",
-      "type": "abl",
-      "command": "compile.all",
-      "group": "build",
-      "problemMatcher": "$abl"
+      "label": "Debug: Kill AVM Process",
+      "type": "shell",
+      "command": "taskkill",
+      "args": [
+        "/IM",
+        "prowin.exe",
+        "/F"
+      ],
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
     }
   ]
 }

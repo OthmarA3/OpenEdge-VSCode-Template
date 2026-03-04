@@ -1,17 +1,8 @@
 {
-  "abl.configuration.runtimes": [
-    {
-      "name": "12.8",
-      "path": "C:\\Progress\\OpenEdge"
-    }
-  ],
-  "abl.configuration.defaultRuntime": "12.8",
-  "files.associations": {
-    "*.p": "abl",
-    "*.i": "abl",
-    "*.w": "abl",
-    "*.cls": "abl"
-  },
-  "editor.tabSize": 4,
-  "editor.insertSpaces": true
+    "abl.configuration.runtimes": [
+        {
+            "name": "12.8",
+            "path": "C:\\Progress\\OpenEdgev128"
+        }
+    ]
 }

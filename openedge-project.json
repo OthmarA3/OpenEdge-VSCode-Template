@@ -1,5 +1,5 @@
 {
-  "name": "MiProyecto",
+  "name": "Ejemplo",
   "version": "1.0",
   "oeversion": "12.8",
   "graphicalMode": true,
@@ -11,43 +11,19 @@
   "buildPath": [
     {
       "type": "source",
-      "path": "src"
+      "path": "src/main"
     },
     {
-      "path": "src/main/i",
-      "type": "propath"
-    },
-    {
-      "path": "src/main/p",
-      "type": "propath"
-    },
-    {
-      "path": "src/main/lib",
+      "path": "build",
       "type": "propath"
     }
   ],
   "buildDirectory": "build",
-  "dbConnections": [],
-  "numThreads": 1,
-  "procedures": [],
-  "compilationOptions": {
-    "-cpstream": "utf-8",
-    "-cpinternal": "utf-8",
-    "-cpcase": "utf-8"
-  },
-  "profiles": [
+  "dbConnections": [
     {
-      "name": "Debug",
-      "inherits": "default",
-      "value": {
-        "graphicalMode": true
-      }
-    },
-    {
-      "name": "TTY",
-      "value": {
-        "graphicalMode": false
-      }
+      "name": "sports2000",
+      "dumpFile": "data/schema/sports2000.df",
+      "parameterFile": "startup.pf"
     }
   ]
 }
