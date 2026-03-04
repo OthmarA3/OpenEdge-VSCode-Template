@@ -11,7 +11,8 @@
   "buildPath": [
     {
       "type": "source",
-      "path": "src/main"
+      "path": "src/main",
+      "buildDir": "build"
     },
     {
       "path": "build",

@@ -2,7 +2,8 @@
     "abl.configuration.runtimes": [
         {
             "name": "12.8",
-            "path": "C:\\Progress\\OpenEdgev128"
+            "path": "C:\\Progress\\OpenEdgev128",
+            "default": true
         }
     ]
 }
