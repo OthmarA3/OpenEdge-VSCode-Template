@@ -61,4 +61,4 @@ Consulta el [Wiki](https://github.com/OthmarA3/OpenEdge-VSCode-Template/wiki) pa
 
 ## Licencia
 
-Uso educativo — Curso OpenEdge + IA (Odesa).
+Uso educativo — Curso OpenEdge + IA.
