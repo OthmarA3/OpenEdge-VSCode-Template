@@ -11,8 +11,7 @@
   "buildPath": [
     {
       "type": "source",
-      "path": "src/main",
-      "buildDir": "build"
+      "path": "src/main"
     },
     {
       "path": "build",
@@ -23,8 +22,8 @@
   "dbConnections": [
     {
       "name": "sports2000",
-      "dumpFile": "data/schema/sports2000.df",
-      "parameterFile": "startup.pf"
+      "schemaFile": "data/schema/sports2000.df",
+      "connect": "-db data/db/sports2000 -ld sports2000 -1"
     }
   ]
 }

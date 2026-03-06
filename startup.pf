@@ -1,1 +1,1 @@
--db data/db/sports2000 -1  
+-db data/db/sports2000 -ld sports2000 -1
