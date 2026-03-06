@@ -2,6 +2,33 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Start Database",
+      "type": "shell",
+      "command": "C:\\Progress\\OpenEdgev128\\bin\\proserve",
+      "args": [
+        "data/db/sports2000",
+        "-S",
+        "20000"
+      ],
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Stop Database",
+      "type": "shell",
+      "command": "C:\\Progress\\OpenEdgev128\\bin\\proshut",
+      "args": [
+        "data/db/sports2000",
+        "-by"
+      ],
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Run ABL GUI",
       "type": "process",
       "command": "C:\\Progress\\OpenEdgev128\\bin\\prowin.exe",
@@ -11,7 +38,9 @@
         "-pf",
         "startup.pf"
       ],
-      "dependsOn": ["Kill AVM"],
+      "dependsOn": [
+        "Kill AVM"
+      ],
       "problemMatcher": []
     },
     {
@@ -25,7 +54,9 @@
         "-pf",
         "startup.pf"
       ],
-      "dependsOn": ["Kill AVM"],
+      "dependsOn": [
+        "Kill AVM"
+      ],
       "problemMatcher": []
     },
     {
